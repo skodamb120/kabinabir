@@ -1,54 +1,52 @@
- # Simple Business Website
+# Kabina BIR - Designový projekt
 
-A clean, responsive single-page website built with HTML and CSS. This website features a modern design with sections for home, about, services, and contact information.
+Jednostránkový web prezentující designový projekt Kabina BIR. Web je postaven pomocí HTML a CSS a prezentuje projekt vhodný pro relaxaci a technické nadšence.
 
-## Features
+## Funkce
 
-- Responsive design that works on all devices
-- Clean and modern UI
-- Smooth scrolling navigation
-- Contact form
-- Team member showcase
-- Services section
-- Mobile-friendly layout
+- Responzivní design pro všechny zařízení
+- Čisté a moderní rozhraní
+- Plynulé scrollování
+- Kontaktní formulář
+- Prezentace funkcí kabiny
+- Mobilní zobrazení
 
-## Structure
+## Struktura
 
 ```
 web-project/
-├── index.html      # Main HTML file
-├── styles.css      # CSS styles
-└── README.md       # This file
+├── index.html      # Hlavní HTML soubor
+├── styles.css      # CSS styly
+└── README.md       # Tento soubor
 ```
 
-## Getting Started
+## Spuštění
 
-1. Clone this repository
-2. Open `index.html` in your web browser
-3. No additional setup required!
+1. Naklonujte tento repozitář
+2. Otevřete `index.html` ve webovém prohlížeči
+3. Žádné další nastavení není potřeba!
 
-## Customization
+## Obsah
 
-### Content
-- Edit `index.html` to change text content
-- Update images by replacing the placeholder URLs
-- Modify contact information in the contact section
+### Hlavní funkce
+- Otáčení
+- Náklon v obou směrech
+- Otevírání víka
+- Elektrický systém (12V, 24V, 220V)
+- Vnitřní vybavení (kamerový systém, monitory, ventilace)
 
-### Styling
-- Edit `styles.css` to change colors, layout, and other visual elements
-- Main colors used:
-  - Primary: #1976d2 (blue)
-  - Secondary: #e3f2fd (light blue)
-  - Text: #333 (dark gray)
+### Kontaktní informace
+- Telefon: +420 775 644 207 (pouze SMS)
+- Email: kabina.bir@seznam.cz
 
-## Browser Support
+## Podpora prohlížečů
 
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-- Mobile browsers
+- Chrome (nejnovější)
+- Firefox (nejnovější)
+- Safari (nejnovější)
+- Edge (nejnovější)
+- Mobilní prohlížeče
 
-## License
+## Licence
 
-This project is open source and available under the MIT License.
+Tento projekt je open source a dostupný pod MIT licencí.
