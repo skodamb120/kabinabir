@@ -27,7 +27,6 @@ function onClick() {
             document.getElementById(id).querySelector(tag).innerHTML = translationByID[i][2]
         }
         else {
-
             document.getElementById(id).querySelector(tag).innerHTML = translationByID[i][3]
         }
     }
@@ -36,18 +35,19 @@ function onClick() {
         translated = true
         changeFlag("česká")
         document.getElementById("3.3").innerHTML = "<strong>Note: </strong>Please only SMS"
-        return
+    } else {
+        translated = false
+        changeFlag("550567")
+        document.getElementById("3.3").innerHTML = "<strong>Poznámka: </strong>Prosím pouze přes SMS"
     }
-
-
-    document.getElementById("3.3").innerHTML = "<strong>Poznámka: </strong>Prosím pouze přes SMS"
-    translated = false
-    changeFlag("anglická")
-
 }
 
-
-function changeFlag(path){
-    
+function changeFlag(path) {
+    const flagElement = document.getElementById("flag");
+    if (path === "česká") {
+        flagElement.src = "images/Flag_of_the_Czech_Republic.png";
+    } else {
+        flagElement.src = "images/Flag_of_the_United_Kingdom.svg.png";
+    }
 }
     
