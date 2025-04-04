@@ -4,15 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kabina BIR - Designový projekt</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com"> 
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <script src="script.js"></script>
     <header>
         <nav>
             <ul>
+             <!----   <li><button type="button" class="button" onclick="onClick()"></button></li> -->
                 <li><a href="#home">Domů</a></li>
                 <li><a href="#about">O projektu</a></li>
                 <li><a href="#features">Funkce</a></li>
@@ -33,7 +35,7 @@
             <h2>O projektu</h2>
             <p>Autor nabízí tento projekt a dokumentaci za smluvních podmínek pro účely mnohostranného využití, především pro relaxaci. Je vhodný pro jednotlivce nebo skupiny s zájmem o design nebo technicky zaměřené ovládání.</p>
             <div class="team">
-                <div class="team-member">
+                <div class="team-member", id="-1">
 					
 					<!-- target = "_blank" opens new web-page in another page -->
 					
@@ -47,15 +49,15 @@
         <section id="features">
             <h2>Funkce a vlastnosti</h2>
             <div class="services-grid">
-                <div class="service-card">
+                <div class="service-card", id="0">
                     <h3>Ovládání</h3>
                     <p>Otáčení, náklon v obou směrech a otevírání víka</p>
                 </div>
-                <div class="service-card">
+                <div class="service-card", id="1">
                     <h3>Elektrický systém</h3>
                     <p>Podpora napětí 12 V, 24 V a napájení ze sítě 220 V</p>
                 </div>
-                <div class="service-card">
+                <div class="service-card", id="2">
                     <h3>Vnitřní vybavení</h3>
                     <p>Externí obvody, kamerový systém, monitory, ventilace a možnost klimatizace</p>
                 </div>
@@ -66,9 +68,9 @@
             <h2>Kontaktujte nás</h2>
             <div class="contact-container">
                 <div class="contact-info">
-                    <p><strong>Telefon:</strong> +420 775 644 207</p>
-                    <p><strong>Email:</strong> kabina.bir@seznam.cz</p>
-                    <p><strong>Poznámka:</strong> Prosím pouze přes SMS</p>
+                    <p id="3.1"><strong>Telefon:</strong> +420 775 644 207</p>
+                    <p id="3.2"><strong>Email:</strong> kabina.bir@seznam.cz</p>
+                    <p id="3.3"><strong>Poznámka:</strong> Prosím pouze přes SMS</p>
                 </div>
             </div>
         </section>
