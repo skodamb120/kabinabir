@@ -297,3 +297,16 @@ footer {
     border: none;
     cursor: pointer;
 }
+
+#flag {
+    width: 40px;
+    height: auto;
+    border-radius: 0px;
+    margin-right: 10px;
+    vertical-align: middle;
+    transition: transform 0.3s ease;
+}
+
+#flag:hover {
+    transform: scale(1.1);
+}
