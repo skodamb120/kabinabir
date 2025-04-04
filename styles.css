@@ -70,10 +70,15 @@ section h2 {
 /* Home section */
 #home {
     text-align: center;
-    background: linear-gradient(135deg, #1976d2 0%, #1565c0 100%);
-    padding: 8rem 2rem;
+    /* background: linear-gradient(135deg, #1976d2 0%, #1565c0 100%); */
+
+    /* Tuto vymen za fotku s lepsou kvalitou */
+
+    background:url("./images/pozadie.jpg");
+    background-size: cover;
+    padding: 8rem 2rem; 
     color: white;
-    border-radius: 0 0 15px 15px;
+    border-radius: 0 0 15px 15px; 
     margin-top: 0;
 }
 
@@ -281,4 +286,14 @@ footer {
 .project-image:hover {
     transform: scale(1.02);
 }
- 
+
+
+.button {
+    background-image: url(./images/Flag_of_the_United_Kingdom.svg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 40px; 
+    height: 20px;
+    border: none;
+    cursor: pointer;
+}
