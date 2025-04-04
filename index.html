@@ -11,8 +11,51 @@
 </head>
 <body>
     <script src="script.js"></script>
+    <script>
+
+        // dočasny fix, ak je šírka displaya menšia ako 800 schová navigation bar
+        // because sa to dojebava ak šírka displaya je >= 800
+
+
+        // čaká kým načíta stránku
+
+        document.addEventListener("DOMContentLoaded", function() {
+            if (window.innerWidth < 800){
+
+                // nájde prvý "nav" tag
+
+                var r = document.querySelector("nav");
+                if (r != null) {
+
+                    // nstaví display na none
+
+                    r.style.setProperty("display", "none")
+                
+                // schmatne tag tlačtko a spraví to isté akurát nastaví parameter na "flex"
+
+                var but = document.querySelector("button")
+
+                if (but != null){
+                    but.style.setProperty("display", "flex")
+                }
+                
+            }       
+            }
+        });
+        
+
+    </script>
     <header>
+
+        <!-- Tlačítko defaultne none, ak width obrazoky >= 800, ináč sa display nastaví na hodnotu flex-->
+        <!--Tlačítko po kliknutí displayne navigation bar-->
+        
+        <!--Uloha imrisko / risko: dokoncit funkciu displayNav() v script.js, nastylovat to tlacitko nech nevyzera jak sracka-->
+        <!--otestovat sa to da v developer options - emulator displaya-->
+
+        <button style="display: none;" onclick="displayNav()">XXXX</button>
         <nav>
+
             <ul>
                 <li><button type="button" class="button" onclick="onClick()"><img id="flag" src="images/Flag_of_the_United_Kingdom.svg.png" alt="Language flag"></button></li>
                 <li><a href="#home">Domů</a></li>
@@ -36,9 +79,6 @@
             <p>Autor nabízí tento projekt a dokumentaci za smluvních podmínek pro účely mnohostranného využití, především pro relaxaci. Je vhodný pro jednotlivce nebo skupiny s zájmem o design nebo technicky zaměřené ovládání.</p>
             <div class="team">
                 <div class="team-member", id="-1">
-					
-					<!-- target = "_blank" opens new web-page in another page -->
-					
                     <a href="img.html" target="_blank"><img src="images/Snímka obrazovky 2025-03-27 o 15.45.17.jpg" alt="Kabina BIR" class="project-image"></a>
                     <h3>Designový exponát</h3>
                     <p>Možnost vystavení v odpovídajících veřejných prostorách</p>
