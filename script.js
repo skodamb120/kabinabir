@@ -19,7 +19,6 @@ const translationByID = [
 var translated = false
 
 function onClick() {
-    /* fill elements for home */
     for (i = 0; i < translationByID.length; i++){
         var id = translationByID[i][0]
         var tag = translationByID[i][1]
@@ -30,7 +29,6 @@ function onClick() {
             document.getElementById(id).querySelector(tag).innerHTML = translationByID[i][3]
         }
     }
-
     if (!translated) {
         translated = true
         changeFlag("česká")
@@ -49,5 +47,10 @@ function changeFlag(path) {
     } else {
         flagElement.src = "images/Flag_of_the_United_Kingdom.svg.png";
     }
+}
+
+
+function displayNav(){
+    return null;
 }
     
