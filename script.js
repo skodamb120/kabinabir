@@ -18,6 +18,8 @@ const translationByID = [
 
 var translated = false
 
+var navBarOpened = false
+
 function onClick() {
     for (i = 0; i < translationByID.length; i++){
         var id = translationByID[i][0]
@@ -31,26 +33,48 @@ function onClick() {
     }
     if (!translated) {
         translated = true
-        changeFlag("česká")
+        changeFlag("images/Flag_of_the_Czech_Republic.png")
         document.getElementById("3.3").innerHTML = "<strong>Note: </strong>Please only SMS"
+        
     } else {
         translated = false
-        changeFlag("550567")
+        changeFlag("images/Flag_of_the_United_Kingdom.svg.png")
         document.getElementById("3.3").innerHTML = "<strong>Poznámka: </strong>Prosím pouze přes SMS"
     }
 }
 
 function changeFlag(path) {
-    const flagElement = document.getElementById("flag");
-    if (path === "česká") {
-        flagElement.src = "images/Flag_of_the_Czech_Republic.png";
-    } else {
-        flagElement.src = "images/Flag_of_the_United_Kingdom.svg.png";
-    }
+    document.getElementById("flag").src = path;
+
+ //   if (path === "česká") {
+ //       flagElement.src = "images/Flag_of_the_Czech_Republic.png";
+ //   } else {
+ //       flagElement.src = "images/Flag_of_the_United_Kingdom.svg.png";
+ //   }
+    
 }
 
 
 function displayNav(){
-    return null;
-}
     
+
+    var r = document.querySelector("nav");
+
+    if (r != null) {
+        
+        if (navBarOpened == true){
+
+            // hiding navigation bar
+
+            r.style.setProperty("display", "none")
+            navBarOpened = false;
+            return
+        }
+
+        // displaying navigation bar
+
+        r.style.setProperty("display", "grid");
+        navBarOpened = true;
+}
+
+}
