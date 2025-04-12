@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kabina BIR - Design Project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <script src="../js/script.js"></script>
+    <script>
+        // dočasny fix, ak je šírka displaya menšia ako 800 schová navigation bar
+        // because sa to dojebava ak šírka displaya je >= 800
+
+        // čaká kým načíta stránku
+        document.addEventListener("DOMContentLoaded", function() {
+            if (window.innerWidth < 800){
+
+                // nájde prvý "nav" tag
+                var r = document.querySelector("nav");
+                if (r != null) {
+
+                    // nastaví display na none
+                    r.style.setProperty("display", "none")
+                
+                // schmatne tag tlačtko a spraví to isté akurát nastaví parameter na "flex"
+                var but = document.querySelector("button")
+
+                if (but != null){
+                    but.style.setProperty("display", "flex")
+                }
+                
+            }
+            }
+        });
+
+        // toto sleduje resize eventy, čiže keď sa zmení rozšírenie obrazovky
+        // asi duplikácia toho prvého kódu, ale preistotu som to tam nechal
+        // možno by sa tá prvá lambda funkcia mohla aj odstrániť
+        window.addEventListener("resize", function() {
+            if (window.innerWidth < 800){
+                var r = document.querySelector("nav");
+                if (r != null){
+                    r.style.setProperty("display", "none")
+                }
+                var but = document.querySelector("button")
+                if (but != null){
+                    but.style.setProperty("display", "flex")
+                }
+            }
+
+            else{
+                var r = document.querySelector("nav");
+                if (r != null) {
+                    r.style.setProperty("display", "flex")
+                    r.style.setProperty("justify-content", "center")
+                }
+                var but = document.querySelector("button")
+                if (but != null){
+                    but.style.setProperty("display", "None")
+                }
+            }
+
+        });
+        
+
+    </script>
+    <header>
+
+        <button type="submit" style="display: none;" onclick="displayNav()">☰</button>
+
+        <nav>
+
+            <ul>
+                <li><button type="button" class="button" onclick="onClick()"><img id="flag" src="../images/Flag_of_the_Czech_Republic.png" alt="Language flag"></button></li>
+                <li id="-2"><a href="#home">Home</a></li>
+                <li id="-3"><a href="#about">About Project</a></li>
+                <li id="-4"><a href="#features">Functions</a></li>
+                <li id="-5"><a href="#contact">Contact</a></li>
+                <li><a href="../img.html" target="_blank">Photos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h1>Kabina BIR</h1>
+            <p>Design project for relaxation and tech enthusiasts</p>
+            <a href="#features" class="cta-button">Explore Functions</a>
+        </section>
+
+        <section id="about">
+            <h2>About the Project</h2>
+            <p>The author offers this project and documentation under contractual terms for various uses, primarily for relaxation. It is suitable for individuals or groups interested in design or technologically oriented control systems.</p>
+            <div class="team">
+                <div class="team-member", id="-1">
+                    <a href="../img.html" target="_blank"><img src="../images/kabina_elipsa.png" alt="Kabina BIR" class="project-image"></a>
+                    <h3>Design Exhibit</h3>
+                    <p>Option to exhibit in appropriate public spaces</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="features">
+            <h2>Functions and Features</h2>
+            <div class="services-grid">
+                <div class="service-card", id="0">
+                    <h3>Control</h3>
+                    <p>Rotation, tilt in both directions, and lid opening</p>
+                </div>
+                <div class="service-card", id="1">
+                    <h3>Electrical System</h3>
+                    <p>Supports 12 V, 24 V, and 220 V AC power supply</p>
+                </div>
+                <div class="service-card", id="2">
+                    <h3>Interior Equipment</h3>
+                    <p>External circuits, camera system, monitors, ventilation, and air conditioning option</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <p id="3.1"><strong>Phone:</strong> +420 775 644 207</p>
+                    <p id="3.2"><strong>Email:</strong> kabina.bir@seznam.cz</p>
+                    <p id="3.3"><strong>Note:</strong> Please contact via SMS only</p>
+                </div>
+            </div>  
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Kabina BIR. All rights reserved.</p>
+        <p style="font-size: small;">Website made with ❤️ by <a target="_blank" href="https://www.instagram.com/_martiiiin_m/">@_martiiiin_m</a>&
+         <a target="_blank" href="https://www.instagram.com/i.lukco/">@i.lukco</a></p>
+    </footer>
+</body>
+</html>
