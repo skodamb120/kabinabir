@@ -81,7 +81,7 @@ section h2 {
 
     /* Tuto vymen za fotku s lepsou kvalitou */
 
-    background:url("./images/pozadie_enh.JPG");
+    background:url("../images/pozadie_enh.JPG");
     background-size: cover;
     padding: 8rem 2rem; 
     color: white;
