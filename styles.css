@@ -135,10 +135,11 @@ section h2 {
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    width: 900px
 }
 
 .team-member img {
-    border-radius: 50%;
+    border-radius: 85%;
     margin-bottom: 1rem;
 }
 

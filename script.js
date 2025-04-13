@@ -14,6 +14,11 @@ const translationByID = [
     ["-1", "h3", "Design exponent", "Designový exponát"],
     ["-1", "p", "Possibility of display in appropriate public spaces", "Možnost vystavení v odpovídajících veřejných prostorách"],
     ["3.1", "strong", "Phone number:", "Telefon:"],
+    ["nav_bar_1", "a", "Home", "Domů"],
+    ["nav_bar_2", "a", "About", "O projektu"],
+    ["nav_bar_3", "a", "Features", "Funkce"],
+    ["nav_bar_4", "a", "Contact", "Kontakt"],
+    ["nav_bar_5", "a", "Fotos", "Fotky"],
 ];
 
 var translated = false
