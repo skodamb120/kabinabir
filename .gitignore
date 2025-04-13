@@ -21,3 +21,6 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+#vscode idk co za json vytvorilo ak ste to niekto pridali toto kludne odstrante
+.vscode
