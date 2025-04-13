@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kabina BIR - Designový projekt</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com"> 
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <script src="../js/script.js"></script>
+    <script>
+        // dočasny fix, ak je šírka displaya menšia ako 800 schová navigation bar
+        // because sa to dojebava ak šírka displaya je >= 800
+
+
+        // čaká kým načíta stránku
+
+        document.addEventListener("DOMContentLoaded", function() {
+            if (window.innerWidth < 800){
+
+                // nájde prvý "nav" tag
+
+                var r = document.querySelector("nav");
+                if (r != null) {
+
+                    // nastaví display na none
+
+                    r.style.setProperty("display", "none")
+                
+                // schmatne tag tlačtko a spraví to isté akurát nastaví parameter na "flex"
+
+                var but = document.querySelector("button")
+
+                if (but != null){
+                    but.style.setProperty("display", "flex")
+                }
+                
+            }
+            }
+        });
+
+        // toto sleduje resize eventy, čiže keď sa zmení rozšírenie obrazovky (asi duplikácia toho prvého kódu
+        // ale preistotu som to tam nechal, nech sa najprv tá stránka načíta v správnom formáte, možno by sa tá prvá lambda funkcia
+        // mohla aj odstrániť)
+
+        window.addEventListener("resize", function() {
+            if (window.innerWidth < 800){
+                var r = document.querySelector("nav");
+                if (r != null){
+                    r.style.setProperty("display", "none")
+                }
+                var but = document.querySelector("button")
+                if (but != null){
+                    but.style.setProperty("display", "flex")
+                }
+            }
+
+            else{
+                var r = document.querySelector("nav");
+                if (r != null) {
+                    r.style.setProperty("display", "flex")
+                    r.style.setProperty("justify-content", "center")
+                }
+                var but = document.querySelector("button")
+                if (but != null){
+                    but.style.setProperty("display", "None")
+                }
+            }
+
+        });
+        
+
+    </script>
+    <header>
+
+        <button type="submit" style="display: none;" onclick="displayNav()">☰</button>
+
+        <nav>
+
+            <ul>
+                <li><button type="button" class="button" onclick="onClick()"><img id="flag" src="../images/Flag_of_the_United_Kingdom.svg.png" alt="Language flag"></button></li>
+                <li id="-2"><a href="#home">Domů</a></li>
+                <li id="-3"><a href="#about">O projektu</a></li>
+                <li id="-4"><a href="#features">Funkce</a></li>
+                <li id="-5"><a href="#contact">Kontakt</a></li>
+				<li><a onclick="open_gallery()" style="cursor: pointer">Fotky</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h1>Kabina BIR</h1>
+            <p>Designový projekt pro relaxaci a technické nadšence</p>
+            <a href="#features" class="cta-button">Prozkoumat funkce</a>
+        </section>
+
+        <section id="about">
+            <h2>O projektu</h2>
+            <p>Autor nabízí tento projekt a dokumentaci za smluvních podmínek pro účely mnohostranného využití, především pro relaxaci. Je vhodný pro jednotlivce nebo skupiny s zájmem o design nebo technicky zaměřené ovládání.</p>
+            <div class="team">
+
+                <div class="gallery" id="gallery">
+                    <img id="gallery-img" src="../images/0.jpg" alt="Kabina BIR">
+                    <span class="gallery-close" onclick="close_gallery()">×</span>
+                    <div class="gallery-controls">
+                      <span onclick="change_img(-1)">❮</span>
+                      <span onclick="change_img(1)">❯</span>
+                    </div>
+                    <div class="gallery-img-count">
+                        <p id="img-count"></p>
+                    </div>
+                  </div>
+
+                <div class="team-member", id="-1">
+                    <a><img src="../images/kabina_elipsa.png" alt="Kabina BIR" 
+                        onclick="open_gallery()" class="project-image"
+                        style="cursor: pointer"></a>
+                    <h3>Designový exponát</h3>
+                    <p>Možnost vystavení v odpovídajících veřejných prostorách</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="features">
+            <h2>Funkce a vlastnosti</h2>
+            <div class="services-grid">
+                <div class="service-card", id="0">
+                    <h3>Ovládání</h3>
+                    <p>Otáčení, náklon v obou směrech a otevírání víka</p>
+                </div>
+                <div class="service-card", id="1">
+                    <h3>Elektrický systém</h3>
+                    <p>Podpora napětí 12 V, 24 V a napájení ze sítě 220 V</p>
+                </div>
+                <div class="service-card", id="2">
+                    <h3>Vnitřní vybavení</h3>
+                    <p>Externí obvody, kamerový systém, monitory, ventilace a možnost klimatizace</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Kontaktujte nás</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <p id="3.1"><strong>Telefon:</strong> +420 775 644 207</p>
+                    <p id="3.2"><strong>Email:</strong> kabina.bir@seznam.cz</p>
+                    <p id="3.3"><strong>Poznámka:</strong> Prosím pouze přes SMS</p>
+                </div>
+            </div>  
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Kabina BIR. Všechna práva vyhrazena.</p>
+        <p style="font-size: small;">Website made with ❤️ by 
+         <a target="_blank" href="https://www.instagram.com/_martiiiin_m/">@_martiiiin_m</a> &
+         <a target="_blank" href="https://www.instagram.com/i.lukco/">@i.lukco</a> &
+         <a target="_blank" href="https://www.instagram.com/rich.ard.6/">@rich.ard.6</a></p>
+    </footer>
+</body>
+</html> 
