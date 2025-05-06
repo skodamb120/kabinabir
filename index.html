@@ -9,16 +9,9 @@
     <script>
 
         // navigator.userLanguage sa pouzival na starsich browseroch napr. internet explorer
+        window.location.replace("cz/index.html")
 
-        const userLanguage = navigator.userLanguage || navigator.language;
-        if (userLanguage.startsWith('sk') || userLanguage.startsWith('cs')){
-            window.location.replace("cz/index.html")
 
-        }
-        else {
-            window.location.replace("en/index.html")
-        }
-        
 
     </script>
 </body>
