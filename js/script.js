@@ -1,6 +1,7 @@
-const gallery = ['../images/0.jpg',
+const gallery = ['../images/0_watermarked.jpg',
                  '../images/1.jpg',
-                 '../images/2.jpg']
+                 '../images/2.jpg',
+                '../images/HPIM1155.JPG'];
 var index = 0;
 
 function open_gallery(){

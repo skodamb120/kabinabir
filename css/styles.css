@@ -130,16 +130,18 @@ section h2 {
 }
 
 .team-member {
-    text-align: center;
-    background: white;
+    height: auto;
     padding: 2rem;
     border-radius: 10px;
+    text-align: center;
+    background: white;
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
 
 .team-member img {
     border-radius: 85%;
     margin-bottom: 1rem;
+
 }
 
 .team-member h3 {
@@ -149,10 +151,6 @@ section h2 {
     font-weight: 600;
 }
 
-.team-member p {
-    font-size: 1.1rem;
-    color: #666;
-}
 
 .gallery {
     display: none;
@@ -328,7 +326,7 @@ footer {
 
 .project-image {
     width: 100%;
-    max-width: 600px;
+    /* max-width: 600px; */
     height: auto;
     border-radius: 12px;
     margin: 2rem 0;
