@@ -11,7 +11,7 @@
         // navigator.userLanguage sa pouzival na starsich browseroch napr. internet explorer
 
         const userLanguage = navigator.userLanguage || navigator.language;
-        if (userLanguage.includes('sk') || userLanguage.includes('cz')){
+        if (userLanguage.startsWith('sk') || userLanguage.startsWith('cs')){
             window.location.replace("cz/index.html")
 
         }
